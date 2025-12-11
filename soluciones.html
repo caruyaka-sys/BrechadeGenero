@@ -1,38 +1,117 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soluciones - Brecha de Género</title>
-    <link rel="stylesheet" href="diseño.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Soluciones - Brecha de Género</title>
+  <link rel="stylesheet" href="diseñof.css">
+  <script src="gen.js" defer></script>
 </head>
 <body>
-
 <header>
-    <h1>Soluciones para Reducir la Brecha de Género</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="brechas.html">¿Qué es?</a></li>
-            <li><a href="causas.html">Causas</a></li>
-            <li><a href="datos.html">Datos</a></li>
-            <li><a href="soluciones.html">Soluciones</a></li>
-        </ul>
-    </nav>
+  <div class="header-container">
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1>Soluciones para la brecha de género</h1>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index2.html">Inicio</a></li>
+      <li><a href="brechas2.html">¿Qué es?</a></li>
+      <li><a href="causas2.html">Causas</a></li>
+      <li><a href="datos2.html">Historias</a></li>
+      <li><a href="soluciones2.html">Soluciones</a></li>
+    </ul>
+  </nav>
 </header>
 
 <section class="section">
-    <p>Algunas medidas importantes son:</p>
-    <ul>
-        <li>Promover la igualdad salarial.</li>
-        <li>Eliminar estereotipos desde la educación básica.</li>
-        <li>Apoyar la participación de mujeres en STEM.</li>
-        <li>Impulsar leyes de igualdad y protección.</li>
-        <li>Fomentar el liderazgo femenino.</li>
-    </ul>
+  <img src="soluciones.png" class="img-section" alt="Soluciones">
+  <p>
+    Cerrar la brecha requiere esfuerzos a distintos niveles: leyes que protejan la igualdad,
+    empresas con políticas activas, educación en igualdad y participación ciudadana.
+    A continuación verás acciones concretas y una actividad para que los visitantes participen.
+  </p>
+
+  <div class="tarjetas">
+    <div class="card">
+      <h3>Educación en igualdad</h3>
+      <p>Programas educativos que cuestionen estereotipos y promuevan modelos de convivencia igualitarios.</p>
+    </div>
+
+    <div class="card">
+      <h3>Apoyo a mujeres en STEM</h3>
+      <p>Becas, mentorías, ferias y redes que conecten a estudiantes con empleadores.</p>
+    </div>
+
+    <div class="card">
+      <h3>Ambientes laborales justos</h3>
+      <p>Transparencia salarial, licencias parentales equitativas y medidas contra el acoso.</p>
+    </div>
+
+    <div class="card">
+      <h3>Participación política</h3>
+      <p>Cupo, formación de liderazgos y estructuras que faciliten el acceso de las mujeres a cargos públicos.</p>
+    </div>
+  </div>
+
+  <h3>¿Qué puedes hacer tú?</h3>
+  <ul class="checklist">
+    <li>Promover lenguaje inclusivo</li>
+    <li>Apoyar proyectos liderados por mujeres</li>
+    <li>Consumir en empresas con buenas prácticas</li>
+    <li>Denunciar situaciones de discriminación</li>
+    <li>Compartir información verificada</li>
+  </ul>
+
+  <h3>Actividad interactiva: Crea tu cartel por la igualdad</h3>
+  <p>Diseña un póster simple: elige fondo, emoji/icono, añade texto y descarga tu creación para compartirla.</p>
+
+  <div class="poster-ui">
+    <div class="canvas-wrap">
+      <canvas id="posterCanvas" style="width:280px; height:392px; display:block; border-radius:8px;"></canvas>
+      <img id="posterPreview" alt="Vista previa" style="display:block; margin-top:10px; width:140px; border-radius:6px;">
+    </div>
+
+    <div class="controls">
+      <label for="posterBg">Fondo</label>
+      <select id="posterBg">
+        <option value="grad:#ffd0a8|#ff8a00">Degradado naranja</option>
+        <option value="#fff7f1">Claro simple</option>
+        <option value="grad:#fff0e0|#ff7b00">Naranja suave</option>
+        <option value="#ffefd6">Ligero</option>
+      </select>
+
+      <label for="posterEmoji">Icono</label>
+      <select id="posterEmoji">
+        <option>✊</option>
+        <option>🤝</option>
+        <option>🌅</option>
+        <option>📣</option>
+        <option>💪</option>
+      </select>
+
+      <label for="posterText">Texto (slogan)</label>
+      <input id="posterText" type="text" value="IGUALDAD PARA TODAS Y TODOS">
+
+      <label for="posterSize">Tamaño de texto</label>
+      <input id="posterSize" type="number" min="28" max="120" value="48">
+
+      <label for="posterColor">Color del texto</label>
+      <input id="posterColor" type="color" value="#5a2d0b">
+
+      <div style="margin-top:10px; display:flex; gap:8px;">
+        <button id="posterDownload" type="button">Descargar PNG</button>
+        <button id="posterReset" type="button" onclick="location.reload()">Reiniciar</button>
+      </div>
+
+      <p style="margin-top:12px; font-size:.9rem; color:var(--muted);">
+        Consejo: usa frases cortas y contundentes. Comparte tu póster en redes con el hashtag #IgualdadYA
+      </p>
+    </div>
+  </div>
+
 </section>
 
 <footer>© 2025 - Proyecto Brecha de Género</footer>
-
 </body>
 </html>

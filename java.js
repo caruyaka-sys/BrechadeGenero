@@ -8,9 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 "La igualdad no es un privilegio, es un derecho.",
                 "Empoderar a una mujer transforma generaciones.",
                 "Donde hay educación, hay igualdad.",
-                "El futuro es inclusivo o no es futuro."
+                "El futuro es inclusivo o no es futuro.",
+                "Cada acción cuenta: informa, escucha, actúa.",
+                "Las brechas se reducen con políticas y voluntad social."
             ];
-            frase.textContent = frases[Math.floor(Math.random() * frases.length)];
+            const text = frases[Math.floor(Math.random() * frases.length)];
+            frase.style.opacity = 0;
+            frase.textContent = text;
+            setTimeout(()=> frase.style.opacity = 1, 40);
         });
     }
 });
